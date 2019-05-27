@@ -10,41 +10,48 @@ import UIKit
 
 final class PhotoView: UIView {
 
-    private let stackView = UIStackView()
+  //  private let stackView = UIStackView()
     private let plusView = UIImageView()
     private let photoLabel = UILabel()
     
     override func didMoveToSuperview(){
         super.didMoveToSuperview()
-        addStackView()
+        Decorator.decorate(self)
+     //  addStackView()
         addPlusView()
         addPhotoLabel()
     }
     private func addPhotoLabel(){
         photoLabel.text = "фото"
-        photoLabel.font = UIFont.systemFont(ofSize: 9)
+        photoLabel.translatesAutoresizingMaskIntoConstraints = false
+        photoLabel.font = UIFont.systemFont(ofSize: 12)
+        photoLabel.textAlignment = .center
         photoLabel.textColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
-        stackView.addArrangedSubview(photoLabel)
+        addSubview(photoLabel)
+        
+        let constraints = NSLayoutConstraint.constraints(withNewVisualFormat: "H:|[photoLabel]|,V:[photoLabel]-16-|", dict: ["photoLabel": photoLabel])
+        addConstraints(constraints)
     }
     private func addPlusView(){
-       // plusView.translatesAutoresizingMaskIntoConstraints = false
+        plusView.translatesAutoresizingMaskIntoConstraints = false
         plusView.contentMode = .scaleAspectFit
         plusView.tintColor = #colorLiteral(red: 0.2980392157, green: 0.4588235294, blue: 0.6392156863, alpha: 1)
         plusView.image = #imageLiteral(resourceName: "add.png")
-        stackView.addArrangedSubview(plusView)
+        addSubview(plusView)
         
-      //  plusView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.25).isActive = true
-     //   plusView.widthAnchor.constraint(equalTo: plusView.heightAnchor).isActive = true
-    }
-    private func addStackView(){
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fillEqually
-        stackView.alignment = .center
-        stackView.axis = .vertical
-        addSubview(stackView)
-        let constraints = NSLayoutConstraint.constraints(withNewVisualFormat: "H:|[stackView]|,V:|[stackView]|", dict: ["stackView" : stackView])
+        let constraints = NSLayoutConstraint.constraints(withNewVisualFormat: "H:|[plusView]|,V:|-(>=0)-[plusView(\(frame.height * 0.3))][photoLabel]", dict: ["photoLabel": photoLabel, "plusView": plusView])
         addConstraints(constraints)
+      
     }
+//    private func addStackView(){
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.distribution = .fillEqually
+//        stackView.alignment = .center
+//        stackView.axis = .vertical
+//        addSubview(stackView)
+//        let constraints = NSLayoutConstraint.constraints(withNewVisualFormat: "H:|[stackView]|,V:|[stackView]|", dict: ["stackView" : stackView])
+//        addConstraints(constraints)
+//    }
     
     
     override func layoutSubviews(){

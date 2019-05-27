@@ -26,7 +26,10 @@
 		8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */; };
 		8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD1A229BDD8300BE3753 /* HeightContainable.swift */; };
 		8405FD1D229BDDDF00BE3753 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD1C229BDDDF00BE3753 /* Typealias.swift */; };
-		8405FD22229BF91500BE3753 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD21229BF91500BE3753 /* GoogleService-Info.plist */; };
+		8405FD2F229C5C1600BE3753 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD2E229C5C1600BE3753 /* HeaderTitleView.swift */; };
+		8405FD31229C5C3100BE3753 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD30229C5C3100BE3753 /* HeaderTitleView.xib */; };
+		8405FD33229C6A6400BE3753 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD32229C6A6400BE3753 /* CellHeaderProtocol.swift */; };
+		8405FD35229C6ADB00BE3753 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD34229C6ADA00BE3753 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,10 @@
 		8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoUserTableViewCell.xib; sourceTree = "<group>"; };
 		8405FD1A229BDD8300BE3753 /* HeightContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightContainable.swift; sourceTree = "<group>"; };
 		8405FD1C229BDDDF00BE3753 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
-		8405FD21229BF91500BE3753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8405FD2E229C5C1600BE3753 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
+		8405FD30229C5C3100BE3753 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
+		8405FD32229C6A6400BE3753 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
+		8405FD34229C6ADA00BE3753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.release.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.release.xcconfig"; sourceTree = "<group>"; };
 		E372ED504192035003AC9A06 /* Pods_RBVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				8405FCDE229B259D00BE3753 /* Info.plist */,
-				8405FD21229BF91500BE3753 /* GoogleService-Info.plist */,
+				8405FD34229C6ADA00BE3753 /* GoogleService-Info.plist */,
 				8405FCF4229B2C2B00BE3753 /* Classes */,
 				8405FCF5229B2C4F00BE3753 /* Resourses */,
 			);
@@ -196,6 +202,7 @@
 		8405FD02229BAA4B00BE3753 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				8405FD23229C443C00BE3753 /* Header Title View */,
 				8405FD10229BC9FB00BE3753 /* Cell */,
 				8405FD03229BAADC00BE3753 /* Photo View */,
 			);
@@ -216,6 +223,7 @@
 				8405FD09229BAB8D00BE3753 /* NibLoadable.swift */,
 				8405FD1A229BDD8300BE3753 /* HeightContainable.swift */,
 				8405FD1C229BDDDF00BE3753 /* Typealias.swift */,
+				8405FD32229C6A6400BE3753 /* CellHeaderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -232,10 +240,27 @@
 		8405FD10229BC9FB00BE3753 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8405FD36229C774100BE3753 /* Info User Cell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8405FD23229C443C00BE3753 /* Header Title View */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD2E229C5C1600BE3753 /* HeaderTitleView.swift */,
+				8405FD30229C5C3100BE3753 /* HeaderTitleView.xib */,
+			);
+			path = "Header Title View";
+			sourceTree = "<group>";
+		};
+		8405FD36229C774100BE3753 /* Info User Cell */ = {
+			isa = PBXGroup;
+			children = (
 				8405FD13229BCA3400BE3753 /* InfoUserTableViewCell.swift */,
 				8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */,
 			);
-			path = Cell;
+			path = "Info User Cell";
 			sourceTree = "<group>";
 		};
 		DA92D07E250F643EE90E3B5C /* Pods */ = {
@@ -331,11 +356,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */,
+				8405FD31229C5C3100BE3753 /* HeaderTitleView.xib in Resources */,
 				8405FCDD229B259D00BE3753 /* LaunchScreen.storyboard in Resources */,
 				8405FCF3229B28A900BE3753 /* ViewController.xib in Resources */,
 				8405FCDA229B259D00BE3753 /* Assets.xcassets in Resources */,
 				8405FD01229BA98B00BE3753 /* RegisterViewController.xib in Resources */,
-				8405FD22229BF91500BE3753 /* GoogleService-Info.plist in Resources */,
+				8405FD35229C6ADB00BE3753 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,12 +428,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405FD33229C6A6400BE3753 /* CellHeaderProtocol.swift in Sources */,
 				8405FCD5229B259C00BE3753 /* ViewController.swift in Sources */,
 				8405FD00229BA98B00BE3753 /* RegisterViewController.swift in Sources */,
 				8405FD0D229BBF1E00BE3753 /* Extension+UIView.swift in Sources */,
 				8405FD0A229BAB8D00BE3753 /* NibLoadable.swift in Sources */,
 				8405FD15229BCA3400BE3753 /* InfoUserTableViewCell.swift in Sources */,
 				8405FCFA229B2CDC00BE3753 /* Router.swift in Sources */,
+				8405FD2F229C5C1600BE3753 /* HeaderTitleView.swift in Sources */,
 				8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */,
 				8405FD05229BAB1700BE3753 /* PhotoView.swift in Sources */,
 				8405FCD3229B259C00BE3753 /* AppDelegate.swift in Sources */,
@@ -571,6 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2GLR26RLC;
 				INFOPLIST_FILE = RBVK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2GLR26RLC;
 				INFOPLIST_FILE = RBVK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
