@@ -9,10 +9,22 @@
 /* Begin PBXBuildFile section */
 		8405FCD3229B259C00BE3753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCD2229B259C00BE3753 /* AppDelegate.swift */; };
 		8405FCD5229B259C00BE3753 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCD4229B259C00BE3753 /* ViewController.swift */; };
-		8405FCD8229B259C00BE3753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8405FCD6229B259C00BE3753 /* Main.storyboard */; };
 		8405FCDA229B259D00BE3753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8405FCD9229B259D00BE3753 /* Assets.xcassets */; };
 		8405FCDD229B259D00BE3753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8405FCDB229B259D00BE3753 /* LaunchScreen.storyboard */; };
 		8405FCE8229B259D00BE3753 /* RBVKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCE7229B259D00BE3753 /* RBVKTests.swift */; };
+		8405FCF3229B28A900BE3753 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FCF2229B28A900BE3753 /* ViewController.xib */; };
+		8405FCFA229B2CDC00BE3753 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCF9229B2CDC00BE3753 /* Router.swift */; };
+		8405FCFC229BA89200BE3753 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCFB229BA89200BE3753 /* StartRouter.swift */; };
+		8405FD00229BA98B00BE3753 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCFE229BA98B00BE3753 /* RegisterViewController.swift */; };
+		8405FD01229BA98B00BE3753 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FCFF229BA98B00BE3753 /* RegisterViewController.xib */; };
+		8405FD05229BAB1700BE3753 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD04229BAB1700BE3753 /* PhotoView.swift */; };
+		8405FD0A229BAB8D00BE3753 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD09229BAB8D00BE3753 /* NibLoadable.swift */; };
+		8405FD0D229BBF1E00BE3753 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD0C229BBF1E00BE3753 /* Extension+UIView.swift */; };
+		8405FD0F229BC22E00BE3753 /* Extension+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD0E229BC22E00BE3753 /* Extension+NSLayoutConstraint.swift */; };
+		8405FD15229BCA3400BE3753 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD13229BCA3400BE3753 /* InfoUserTableViewCell.swift */; };
+		8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */; };
+		8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD1A229BDD8300BE3753 /* HeightContainable.swift */; };
+		8405FD1D229BDDDF00BE3753 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD1C229BDDDF00BE3753 /* Typealias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +41,25 @@
 		8405FCCF229B259C00BE3753 /* RBVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405FCD2229B259C00BE3753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8405FCD4229B259C00BE3753 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8405FCD7229B259C00BE3753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8405FCD9229B259D00BE3753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8405FCDC229B259D00BE3753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8405FCDE229B259D00BE3753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8405FCE3229B259D00BE3753 /* RBVKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBVKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405FCE7229B259D00BE3753 /* RBVKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBVKTests.swift; sourceTree = "<group>"; };
 		8405FCE9229B259D00BE3753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8405FCF2229B28A900BE3753 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		8405FCF9229B2CDC00BE3753 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8405FCFB229BA89200BE3753 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		8405FCFE229BA98B00BE3753 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8405FCFF229BA98B00BE3753 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		8405FD04229BAB1700BE3753 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		8405FD09229BAB8D00BE3753 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		8405FD0C229BBF1E00BE3753 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		8405FD0E229BC22E00BE3753 /* Extension+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		8405FD13229BCA3400BE3753 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
+		8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoUserTableViewCell.xib; sourceTree = "<group>"; };
+		8405FD1A229BDD8300BE3753 /* HeightContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightContainable.swift; sourceTree = "<group>"; };
+		8405FD1C229BDDDF00BE3753 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +101,9 @@
 		8405FCD1229B259C00BE3753 /* RBVK */ = {
 			isa = PBXGroup;
 			children = (
-				8405FCD2229B259C00BE3753 /* AppDelegate.swift */,
-				8405FCD4229B259C00BE3753 /* ViewController.swift */,
-				8405FCD6229B259C00BE3753 /* Main.storyboard */,
-				8405FCD9229B259D00BE3753 /* Assets.xcassets */,
-				8405FCDB229B259D00BE3753 /* LaunchScreen.storyboard */,
 				8405FCDE229B259D00BE3753 /* Info.plist */,
+				8405FCF4229B2C2B00BE3753 /* Classes */,
+				8405FCF5229B2C4F00BE3753 /* Resourses */,
 			);
 			path = RBVK;
 			sourceTree = "<group>";
@@ -94,6 +115,109 @@
 				8405FCE9229B259D00BE3753 /* Info.plist */,
 			);
 			path = RBVKTests;
+			sourceTree = "<group>";
+		};
+		8405FCF4229B2C2B00BE3753 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8405FCD2229B259C00BE3753 /* AppDelegate.swift */,
+				8405FD0B229BBEE900BE3753 /* Extension */,
+				8405FCF8229B2CB900BE3753 /* Routers  */,
+				8405FCF7229B2C9600BE3753 /* Screens */,
+				8405FD02229BAA4B00BE3753 /* Custom Views */,
+				8405FD08229BAB5100BE3753 /* Protocols */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8405FCF5229B2C4F00BE3753 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				8405FCD9229B259D00BE3753 /* Assets.xcassets */,
+				8405FCDB229B259D00BE3753 /* LaunchScreen.storyboard */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		8405FCF6229B2C7A00BE3753 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				8405FCD4229B259C00BE3753 /* ViewController.swift */,
+				8405FCF2229B28A900BE3753 /* ViewController.xib */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		8405FCF7229B2C9600BE3753 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8405FCFD229BA96000BE3753 /* Register */,
+				8405FCF6229B2C7A00BE3753 /* Start */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8405FCF8229B2CB900BE3753 /* Routers  */ = {
+			isa = PBXGroup;
+			children = (
+				8405FCF9229B2CDC00BE3753 /* Router.swift */,
+				8405FCFB229BA89200BE3753 /* StartRouter.swift */,
+			);
+			path = "Routers ";
+			sourceTree = "<group>";
+		};
+		8405FCFD229BA96000BE3753 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8405FCFE229BA98B00BE3753 /* RegisterViewController.swift */,
+				8405FCFF229BA98B00BE3753 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8405FD02229BAA4B00BE3753 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD10229BC9FB00BE3753 /* Cell */,
+				8405FD03229BAADC00BE3753 /* Photo View */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		8405FD03229BAADC00BE3753 /* Photo View */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD04229BAB1700BE3753 /* PhotoView.swift */,
+			);
+			path = "Photo View";
+			sourceTree = "<group>";
+		};
+		8405FD08229BAB5100BE3753 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD09229BAB8D00BE3753 /* NibLoadable.swift */,
+				8405FD1A229BDD8300BE3753 /* HeightContainable.swift */,
+				8405FD1C229BDDDF00BE3753 /* Typealias.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8405FD0B229BBEE900BE3753 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD0C229BBF1E00BE3753 /* Extension+UIView.swift */,
+				8405FD0E229BC22E00BE3753 /* Extension+NSLayoutConstraint.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8405FD10229BC9FB00BE3753 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD13229BCA3400BE3753 /* InfoUserTableViewCell.swift */,
+				8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +301,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */,
 				8405FCDD229B259D00BE3753 /* LaunchScreen.storyboard in Resources */,
+				8405FCF3229B28A900BE3753 /* ViewController.xib in Resources */,
 				8405FCDA229B259D00BE3753 /* Assets.xcassets in Resources */,
-				8405FCD8229B259C00BE3753 /* Main.storyboard in Resources */,
+				8405FD01229BA98B00BE3753 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +324,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8405FCD5229B259C00BE3753 /* ViewController.swift in Sources */,
+				8405FD00229BA98B00BE3753 /* RegisterViewController.swift in Sources */,
+				8405FD0D229BBF1E00BE3753 /* Extension+UIView.swift in Sources */,
+				8405FD0A229BAB8D00BE3753 /* NibLoadable.swift in Sources */,
+				8405FD15229BCA3400BE3753 /* InfoUserTableViewCell.swift in Sources */,
+				8405FCFA229B2CDC00BE3753 /* Router.swift in Sources */,
+				8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */,
+				8405FD05229BAB1700BE3753 /* PhotoView.swift in Sources */,
 				8405FCD3229B259C00BE3753 /* AppDelegate.swift in Sources */,
+				8405FCFC229BA89200BE3753 /* StartRouter.swift in Sources */,
+				8405FD1D229BDDDF00BE3753 /* Typealias.swift in Sources */,
+				8405FD0F229BC22E00BE3753 /* Extension+NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +357,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8405FCD6229B259C00BE3753 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8405FCD7229B259C00BE3753 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8405FCDB229B259D00BE3753 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
