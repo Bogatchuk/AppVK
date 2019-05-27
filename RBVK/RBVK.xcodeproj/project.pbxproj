@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		376B70B0D2E631DDABF2AAFE /* Pods_RBVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E372ED504192035003AC9A06 /* Pods_RBVK.framework */; };
 		8405FCD3229B259C00BE3753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCD2229B259C00BE3753 /* AppDelegate.swift */; };
 		8405FCD5229B259C00BE3753 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FCD4229B259C00BE3753 /* ViewController.swift */; };
 		8405FCDA229B259D00BE3753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8405FCD9229B259D00BE3753 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */; };
 		8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD1A229BDD8300BE3753 /* HeightContainable.swift */; };
 		8405FD1D229BDDDF00BE3753 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD1C229BDDDF00BE3753 /* Typealias.swift */; };
+		8405FD22229BF91500BE3753 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD21229BF91500BE3753 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6DC01F7BD841FAA61EA5C59B /* Pods-RBVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.debug.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.debug.xcconfig"; sourceTree = "<group>"; };
 		8405FCCF229B259C00BE3753 /* RBVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405FCD2229B259C00BE3753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8405FCD4229B259C00BE3753 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +63,9 @@
 		8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoUserTableViewCell.xib; sourceTree = "<group>"; };
 		8405FD1A229BDD8300BE3753 /* HeightContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightContainable.swift; sourceTree = "<group>"; };
 		8405FD1C229BDDDF00BE3753 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		8405FD21229BF91500BE3753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.release.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.release.xcconfig"; sourceTree = "<group>"; };
+		E372ED504192035003AC9A06 /* Pods_RBVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376B70B0D2E631DDABF2AAFE /* Pods_RBVK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C0F852B6B871BF91168C891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E372ED504192035003AC9A06 /* Pods_RBVK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8405FCC6229B259C00BE3753 = {
 			isa = PBXGroup;
 			children = (
 				8405FCD1229B259C00BE3753 /* RBVK */,
 				8405FCE6229B259D00BE3753 /* RBVKTests */,
 				8405FCD0229B259C00BE3753 /* Products */,
+				DA92D07E250F643EE90E3B5C /* Pods */,
+				7C0F852B6B871BF91168C891 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8405FCDE229B259D00BE3753 /* Info.plist */,
+				8405FD21229BF91500BE3753 /* GoogleService-Info.plist */,
 				8405FCF4229B2C2B00BE3753 /* Classes */,
 				8405FCF5229B2C4F00BE3753 /* Resourses */,
 			);
@@ -220,6 +238,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DA92D07E250F643EE90E3B5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DC01F7BD841FAA61EA5C59B /* Pods-RBVK.debug.xcconfig */,
+				8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8405FCEC229B259D00BE3753 /* Build configuration list for PBXNativeTarget "RBVK" */;
 			buildPhases = (
+				AE20A4E2B13664C8E11CDAF2 /* [CP] Check Pods Manifest.lock */,
 				8405FCCB229B259C00BE3753 /* Sources */,
 				8405FCCC229B259C00BE3753 /* Frameworks */,
 				8405FCCD229B259C00BE3753 /* Resources */,
+				F5C0E99F70B4AB4CFEBE428B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +335,7 @@
 				8405FCF3229B28A900BE3753 /* ViewController.xib in Resources */,
 				8405FCDA229B259D00BE3753 /* Assets.xcassets in Resources */,
 				8405FD01229BA98B00BE3753 /* RegisterViewController.xib in Resources */,
+				8405FD22229BF91500BE3753 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +347,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE20A4E2B13664C8E11CDAF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RBVK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C0E99F70B4AB4CFEBE428B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RBVK/Pods-RBVK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RBVK/Pods-RBVK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8405FCCB229B259C00BE3753 /* Sources */ = {
@@ -486,6 +565,7 @@
 		};
 		8405FCED229B259D00BE3753 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC01F7BD841FAA61EA5C59B /* Pods-RBVK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +584,7 @@
 		};
 		8405FCEE229B259D00BE3753 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
