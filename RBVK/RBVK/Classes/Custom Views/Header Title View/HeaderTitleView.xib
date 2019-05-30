@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш пол:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-fB-Oxu">
-                    <rect key="frame" x="16" y="23" width="72" height="21"/>
+                    <rect key="frame" x="16" y="21" width="72" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="darkGrayColor"/>
                     <nil key="highlightedColor"/>
@@ -28,7 +28,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="M6d-fB-Oxu" secondAttribute="trailing" constant="8" id="0Sq-yD-7YS"/>
                 <constraint firstItem="M6d-fB-Oxu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="CjZ-Uf-ElI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M6d-fB-Oxu" secondAttribute="bottom" id="oqH-Kv-yyd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M6d-fB-Oxu" secondAttribute="bottom" constant="2" id="oqH-Kv-yyd"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

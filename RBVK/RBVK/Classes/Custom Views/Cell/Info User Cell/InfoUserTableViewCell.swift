@@ -17,6 +17,7 @@ class InfoUserTableViewCell: UITableViewCell, StaticCellProtocol {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         Decorator.decorate(self)
         
         

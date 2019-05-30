@@ -30,6 +30,12 @@
 		8405FD31229C5C3100BE3753 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD30229C5C3100BE3753 /* HeaderTitleView.xib */; };
 		8405FD33229C6A6400BE3753 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD32229C6A6400BE3753 /* CellHeaderProtocol.swift */; };
 		8405FD35229C6ADB00BE3753 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD34229C6ADA00BE3753 /* GoogleService-Info.plist */; };
+		8405FD3A229C786100BE3753 /* SegmenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD38229C786100BE3753 /* SegmenterTableViewCell.swift */; };
+		8405FD3B229C786100BE3753 /* SegmenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD39229C786100BE3753 /* SegmenterTableViewCell.xib */; };
+		8405FD4422A0341C00BE3753 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD4222A0341C00BE3753 /* TextTableViewCell.swift */; };
+		8405FD4522A0341C00BE3753 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD4322A0341C00BE3753 /* TextTableViewCell.xib */; };
+		8405FD4E22A0407800BE3753 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD4C22A0407800BE3753 /* TextFieldTableViewCell.swift */; };
+		8405FD4F22A0407800BE3753 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD4D22A0407800BE3753 /* TextFieldTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,12 @@
 		8405FD30229C5C3100BE3753 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		8405FD32229C6A6400BE3753 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
 		8405FD34229C6ADA00BE3753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8405FD38229C786100BE3753 /* SegmenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmenterTableViewCell.swift; sourceTree = "<group>"; };
+		8405FD39229C786100BE3753 /* SegmenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmenterTableViewCell.xib; sourceTree = "<group>"; };
+		8405FD4222A0341C00BE3753 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		8405FD4322A0341C00BE3753 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		8405FD4C22A0407800BE3753 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		8405FD4D22A0407800BE3753 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.release.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.release.xcconfig"; sourceTree = "<group>"; };
 		E372ED504192035003AC9A06 /* Pods_RBVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -204,6 +216,7 @@
 			children = (
 				8405FD23229C443C00BE3753 /* Header Title View */,
 				8405FD10229BC9FB00BE3753 /* Cell */,
+				8405FD4A22A03FF900BE3753 /* Text Cell */,
 				8405FD03229BAADC00BE3753 /* Photo View */,
 			);
 			path = "Custom Views";
@@ -240,7 +253,9 @@
 		8405FD10229BC9FB00BE3753 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8405FD4B22A0404600BE3753 /* Text Field Cell */,
 				8405FD36229C774100BE3753 /* Info User Cell */,
+				8405FD37229C781F00BE3753 /* Segmenter Cell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -261,6 +276,33 @@
 				8405FD14229BCA3400BE3753 /* InfoUserTableViewCell.xib */,
 			);
 			path = "Info User Cell";
+			sourceTree = "<group>";
+		};
+		8405FD37229C781F00BE3753 /* Segmenter Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD38229C786100BE3753 /* SegmenterTableViewCell.swift */,
+				8405FD39229C786100BE3753 /* SegmenterTableViewCell.xib */,
+			);
+			path = "Segmenter Cell";
+			sourceTree = "<group>";
+		};
+		8405FD4A22A03FF900BE3753 /* Text Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD4222A0341C00BE3753 /* TextTableViewCell.swift */,
+				8405FD4322A0341C00BE3753 /* TextTableViewCell.xib */,
+			);
+			path = "Text Cell";
+			sourceTree = "<group>";
+		};
+		8405FD4B22A0404600BE3753 /* Text Field Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8405FD4C22A0407800BE3753 /* TextFieldTableViewCell.swift */,
+				8405FD4D22A0407800BE3753 /* TextFieldTableViewCell.xib */,
+			);
+			path = "Text Field Cell";
 			sourceTree = "<group>";
 		};
 		DA92D07E250F643EE90E3B5C /* Pods */ = {
@@ -355,13 +397,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405FD3B229C786100BE3753 /* SegmenterTableViewCell.xib in Resources */,
 				8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */,
 				8405FD31229C5C3100BE3753 /* HeaderTitleView.xib in Resources */,
 				8405FCDD229B259D00BE3753 /* LaunchScreen.storyboard in Resources */,
 				8405FCF3229B28A900BE3753 /* ViewController.xib in Resources */,
 				8405FCDA229B259D00BE3753 /* Assets.xcassets in Resources */,
 				8405FD01229BA98B00BE3753 /* RegisterViewController.xib in Resources */,
+				8405FD4F22A0407800BE3753 /* TextFieldTableViewCell.xib in Resources */,
 				8405FD35229C6ADB00BE3753 /* GoogleService-Info.plist in Resources */,
+				8405FD4522A0341C00BE3753 /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405FD4E22A0407800BE3753 /* TextFieldTableViewCell.swift in Sources */,
 				8405FD33229C6A6400BE3753 /* CellHeaderProtocol.swift in Sources */,
 				8405FCD5229B259C00BE3753 /* ViewController.swift in Sources */,
 				8405FD00229BA98B00BE3753 /* RegisterViewController.swift in Sources */,
@@ -438,6 +484,8 @@
 				8405FD2F229C5C1600BE3753 /* HeaderTitleView.swift in Sources */,
 				8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */,
 				8405FD05229BAB1700BE3753 /* PhotoView.swift in Sources */,
+				8405FD4422A0341C00BE3753 /* TextTableViewCell.swift in Sources */,
+				8405FD3A229C786100BE3753 /* SegmenterTableViewCell.swift in Sources */,
 				8405FCD3229B259C00BE3753 /* AppDelegate.swift in Sources */,
 				8405FCFC229BA89200BE3753 /* StartRouter.swift in Sources */,
 				8405FD1D229BDDDF00BE3753 /* Typealias.swift in Sources */,

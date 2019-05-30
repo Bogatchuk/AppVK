@@ -13,12 +13,27 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var models:[HeaderModel] = [.info, .sex, .birthday]
     
+    private let datePickerView: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.maximumDate = Date()// максимальная дата сегодня
+        return picker
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Регистрация"
         Decorator.decorate(self)
         registerCells()
         delegating()
+        configureDatePickerView()
+    }
+    
+    private func configureDatePickerView(){
+        datePickerView.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
+    }
+    
+    @objc private func datePickerChanged(sender: UIDatePicker){
+        let date = sender.date
+        print(date)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,6 +46,9 @@ class RegisterViewController: UIViewController {
     
     private func registerCells(){
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
+        tableView.register(SegmenterTableViewCell.nib, forCellReuseIdentifier: SegmenterTableViewCell.name)
+        //tableView.register(TextTableViewCell.nib, forCellReuseIdentifier: TextTableViewCell.name)
+         tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.name)
     }
 }
 extension RegisterViewController{
@@ -62,6 +80,7 @@ extension RegisterViewController {
         static func decorate(_ vc: RegisterViewController){
             vc.tableView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
             vc.tableView.separatorColor = .clear
+            vc.tableView.keyboardDismissMode = .onDrag // когда свайпаем по таблице , клавиатура скрываеться
             vc.navigationController?.navigationBar.prefersLargeTitles = true
             vc.tableView.contentInset = UIEdgeInsets(top: tabelViewTopInset, left: 0, bottom: 0, right: 0)
         }
@@ -73,8 +92,8 @@ extension RegisterViewController: UITableViewDelegate{
         switch model {
         case .userInfo:
             return 100
-        default:
-            return 0
+        case .sex, .birthday:
+            return 44
         }
     }
 }
@@ -96,8 +115,9 @@ extension RegisterViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let heareModel = models[section]
         switch heareModel {
-        case .sex:
+        case .sex, .birthday:
             return 44
+        
         default:
             return 0
         }
@@ -115,11 +135,23 @@ extension RegisterViewController: UITableViewDataSource{
             if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell{
                 return cell
             }
-        default:
-            break
+        case .sex:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SegmenterTableViewCell.name, for: indexPath) as? SegmenterTableViewCell{
+                cell.indexChanged = { index in
+                    print(index)
+                }
+                return cell
+            }
+        case .birthday:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.name, for: indexPath) as? TextFieldTableViewCell{
+               //  cell.set(text: "Дата рождения")
+                cell.textField.inputView = datePickerView
+                return cell
+            }
         }
         return UITableViewCell()
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
