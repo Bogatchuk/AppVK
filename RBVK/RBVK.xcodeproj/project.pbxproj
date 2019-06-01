@@ -36,6 +36,9 @@
 		8405FD4522A0341C00BE3753 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD4322A0341C00BE3753 /* TextTableViewCell.xib */; };
 		8405FD4E22A0407800BE3753 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FD4C22A0407800BE3753 /* TextFieldTableViewCell.swift */; };
 		8405FD4F22A0407800BE3753 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405FD4D22A0407800BE3753 /* TextFieldTableViewCell.xib */; };
+		84F9295222A1C63E00211AE5 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295122A1C63E00211AE5 /* RegisterModel.swift */; };
+		84F9295422A1C69C00211AE5 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295322A1C69C00211AE5 /* Sex.swift */; };
+		84F9295622A2CAA300211AE5 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295522A2CAA300211AE5 /* Extension+UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		8405FD4322A0341C00BE3753 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		8405FD4C22A0407800BE3753 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		8405FD4D22A0407800BE3753 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		84F9295122A1C63E00211AE5 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		84F9295322A1C69C00211AE5 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		84F9295522A2CAA300211AE5 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.release.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.release.xcconfig"; sourceTree = "<group>"; };
 		E372ED504192035003AC9A06 /* Pods_RBVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,6 +162,7 @@
 		8405FCF4229B2C2B00BE3753 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84F9295022A1C61100211AE5 /* Models */,
 				8405FCD2229B259C00BE3753 /* AppDelegate.swift */,
 				8405FD0B229BBEE900BE3753 /* Extension */,
 				8405FCF8229B2CB900BE3753 /* Routers  */,
@@ -216,7 +223,6 @@
 			children = (
 				8405FD23229C443C00BE3753 /* Header Title View */,
 				8405FD10229BC9FB00BE3753 /* Cell */,
-				8405FD4A22A03FF900BE3753 /* Text Cell */,
 				8405FD03229BAADC00BE3753 /* Photo View */,
 			);
 			path = "Custom Views";
@@ -246,6 +252,7 @@
 			children = (
 				8405FD0C229BBF1E00BE3753 /* Extension+UIView.swift */,
 				8405FD0E229BC22E00BE3753 /* Extension+NSLayoutConstraint.swift */,
+				84F9295522A2CAA300211AE5 /* Extension+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -253,9 +260,10 @@
 		8405FD10229BC9FB00BE3753 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8405FD4B22A0404600BE3753 /* Text Field Cell */,
 				8405FD36229C774100BE3753 /* Info User Cell */,
+				8405FD4B22A0404600BE3753 /* Text Field Cell */,
 				8405FD37229C781F00BE3753 /* Segmenter Cell */,
+				8405FD4A22A03FF900BE3753 /* Text Cell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -303,6 +311,15 @@
 				8405FD4D22A0407800BE3753 /* TextFieldTableViewCell.xib */,
 			);
 			path = "Text Field Cell";
+			sourceTree = "<group>";
+		};
+		84F9295022A1C61100211AE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84F9295122A1C63E00211AE5 /* RegisterModel.swift */,
+				84F9295322A1C69C00211AE5 /* Sex.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DA92D07E250F643EE90E3B5C /* Pods */ = {
@@ -481,11 +498,14 @@
 				8405FD0A229BAB8D00BE3753 /* NibLoadable.swift in Sources */,
 				8405FD15229BCA3400BE3753 /* InfoUserTableViewCell.swift in Sources */,
 				8405FCFA229B2CDC00BE3753 /* Router.swift in Sources */,
+				84F9295622A2CAA300211AE5 /* Extension+UIViewController.swift in Sources */,
+				84F9295222A1C63E00211AE5 /* RegisterModel.swift in Sources */,
 				8405FD2F229C5C1600BE3753 /* HeaderTitleView.swift in Sources */,
 				8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */,
 				8405FD05229BAB1700BE3753 /* PhotoView.swift in Sources */,
 				8405FD4422A0341C00BE3753 /* TextTableViewCell.swift in Sources */,
 				8405FD3A229C786100BE3753 /* SegmenterTableViewCell.swift in Sources */,
+				84F9295422A1C69C00211AE5 /* Sex.swift in Sources */,
 				8405FCD3229B259C00BE3753 /* AppDelegate.swift in Sources */,
 				8405FCFC229BA89200BE3753 /* StartRouter.swift in Sources */,
 				8405FD1D229BDDDF00BE3753 /* Typealias.swift in Sources */,

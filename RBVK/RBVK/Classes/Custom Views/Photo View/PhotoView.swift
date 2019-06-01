@@ -13,13 +13,19 @@ final class PhotoView: UIView {
   //  private let stackView = UIStackView()
     private let plusView = UIImageView()
     private let photoLabel = UILabel()
-    
+    var clicked: VoidClosure?
     override func didMoveToSuperview(){
         super.didMoveToSuperview()
         Decorator.decorate(self)
      //  addStackView()
         addPlusView()
         addPhotoLabel()
+    }
+    
+    //нажатие на наш view  закончилось
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        clicked?()
     }
     private func addPhotoLabel(){
         photoLabel.text = "фото"
