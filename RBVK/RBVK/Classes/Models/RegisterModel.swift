@@ -14,6 +14,11 @@ class RegisterModel{
     var password: String?
     var sex: Sex = .male
     var birthday: Date?
+    var userId: String
+    
+    init(){
+        self.userId = UUID.init().uuidString
+    }
     
     var isFilled: Bool {
         guard !(email ?? "").isEmpty, !(password ?? "").isEmpty, birthday != nil else {
