@@ -12,6 +12,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private let models:[HeaderModel] = [.info, .sex, .birthday]
+    private let sexModels:[Sex] = [.male,.female]
     private var registerModel = RegisterModel()
     
     private let datePickerView: UIDatePicker = {
@@ -27,14 +28,23 @@ class RegisterViewController: UIViewController {
         delegating()
         configureDatePickerView()
         addRightBarButton()
+        updateDoneButtonStatus()//что бы изначально ее заблокировать
     }
     
     private func addRightBarButton(){
         let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(rightBarButtonClicked))
         navigationItem.rightBarButtonItem = barButton
     }
+    
+    //вызываеться везде где происходят изменения
+    private func updateDoneButtonStatus(){
+        navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
+    }
     @objc private func rightBarButtonClicked(sender: UIBarButtonItem){
-        showAlert(with: "Ошибка", and: "Пожалуйста, заполните все поля.")
+        AuthManager.shared.register(with: registerModel) {
+            self.showAlert(with: "Успешно", and: "Вы зарегистрированы.")
+        }
+        
     }
     
     private func configureDatePickerView(){
@@ -44,6 +54,7 @@ class RegisterViewController: UIViewController {
     @objc private func datePickerChanged(sender: UIDatePicker){
         let date = sender.date
         registerModel.birthday = date
+        updateDoneButtonStatus()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,6 +68,8 @@ class RegisterViewController: UIViewController {
     private func photoViewClicked(){
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true)
         
     }
     
@@ -64,21 +77,25 @@ class RegisterViewController: UIViewController {
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
         tableView.register(SegmenterTableViewCell.nib, forCellReuseIdentifier: SegmenterTableViewCell.name)
         //tableView.register(TextTableViewCell.nib, forCellReuseIdentifier: TextTableViewCell.name)
-         tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.name)
+        tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.name)
     }
 }
 
 extension RegisterViewController:UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     //достаем выбранное изображение
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] else {
+        picker.dismiss(animated: true, completion: nil) // после выбора фото picker закрываеться
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
         }
+        registerModel.photo = image
+        updateDoneButtonStatus()
+        tableView.reloadData()
     }
 }
 
 extension RegisterViewController{
-   fileprivate enum CellModel{
+    fileprivate enum CellModel{
         case userInfo
         case sex
         case birthday
@@ -135,7 +152,7 @@ extension RegisterViewController: UITableViewDataSource{
         default:
             return nil
         }
-       
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -143,7 +160,7 @@ extension RegisterViewController: UITableViewDataSource{
         switch heareModel {
         case .sex, .birthday:
             return 44
-        
+            
         default:
             return 0
         }
@@ -154,7 +171,7 @@ extension RegisterViewController: UITableViewDataSource{
         return models[section].cellModels.count
     }
     
-   
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.section].cellModels[indexPath.row]
@@ -162,18 +179,33 @@ extension RegisterViewController: UITableViewDataSource{
         case .userInfo:
             if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell{
                 cell.photoViewClicked = self.photoViewClicked
+                cell.set(image: registerModel.photo)
+                cell.emailTextChanged = {
+                    text in
+                    self.registerModel.email = text
+                    self.updateDoneButtonStatus()
+                }
+                cell.passwordTextChanged = {
+                    text in
+                    self.registerModel.password = text
+                    self.updateDoneButtonStatus()
+                }
                 return cell
             }
         case .sex:
             if let cell = tableView.dequeueReusableCell(withIdentifier: SegmenterTableViewCell.name, for: indexPath) as? SegmenterTableViewCell{
+                //ставим название к нашему сегменту, взяли rawValue и превратили его в String с большой буквы
+                cell.set(titles: sexModels.map{$0.rawValue.capitalized})
                 cell.indexChanged = { index in
-                    print(index)
+                    let sex = self.sexModels[index]
+                    self.registerModel.sex = sex
+                    self.updateDoneButtonStatus()
                 }
                 return cell
             }
         case .birthday:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.name, for: indexPath) as? TextFieldTableViewCell{
-               //  cell.set(text: "Дата рождения")
+                //  cell.set(text: "Дата рождения")
                 cell.textField.inputView = datePickerView
                 return cell
             }

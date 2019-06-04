@@ -13,6 +13,8 @@ final class PhotoView: UIView {
   //  private let stackView = UIStackView()
     private let plusView = UIImageView()
     private let photoLabel = UILabel()
+    private let imageView = UIImageView()// для отображения фото, если оно у нас есть
+    
     var clicked: VoidClosure?
     override func didMoveToSuperview(){
         super.didMoveToSuperview()
@@ -20,6 +22,7 @@ final class PhotoView: UIView {
      //  addStackView()
         addPlusView()
         addPhotoLabel()
+        addImageView()
     }
     
     //нажатие на наш view  закончилось
@@ -27,6 +30,25 @@ final class PhotoView: UIView {
         super.touchesEnded(touches, with: event)
         clicked?()
     }
+    
+    func set(image: UIImage?){
+        imageView.image = image
+        imageView.isHidden = image == nil // спрятан если image == nil
+
+    }
+    private func addImageView(){
+        imageView.translatesAutoresizingMaskIntoConstraints = false // что бы добавлять constraints через код
+        imageView.isHidden = true //изначально не видна на экране
+        imageView.contentMode = .scaleAspectFill // этот мод лучше отображает фото
+        imageView.clipsToBounds = true
+        addSubview(imageView)
+        
+        let constreains = NSLayoutConstraint.constraints(withNewVisualFormat: "H:|[imageView]|,V:|[imageView]|", dict: ["imageView": imageView])// наше розширение для constraints
+        
+        addConstraints(constreains)
+    }
+    
+    
     private func addPhotoLabel(){
         photoLabel.text = "фото"
         photoLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -75,6 +97,7 @@ extension PhotoView {
         }
         static func layoutSubviews(_ view: PhotoView){
             view.round()
+            view.imageView.round()
         }
     }
 }

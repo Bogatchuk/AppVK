@@ -12,20 +12,45 @@ class InfoUserTableViewCell: UITableViewCell, StaticCellProtocol {
     
     @IBOutlet private weak var backgroundFieldsView: UIView!
     @IBOutlet private weak var photoView: PhotoView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+
     
     static var height: CGFloat {
         return 100
     }
     
-    var photoViewClicked: VoidClosure?
+    var photoViewClicked: VoidClosure? {
+        didSet{
+            photoView.clicked = photoViewClicked//тригер о нажатии передаеться в InfoUserTableViewCell
+        }
+    }
+    
+    var emailTextChanged: ItemClosure<String>?
+    var passwordTextChanged: ItemClosure<String>?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
         Decorator.decorate(self)
+        addTargets()
         
-        photoViewClicked = photoView.clicked//тригер о нажатии передаеться в InfoUserTableViewCell
-        
+    }
+    
+    private func addTargets(){
+        emailTextField.addTarget(self, action: #selector(emailTextFieldChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordTextFieldChanged), for: .editingChanged)
+    }
+    @objc private func emailTextFieldChanged(sender: UITextField){
+        emailTextChanged?(sender.text ?? "")
+    }
+    @objc private func passwordTextFieldChanged(sender: UITextField){
+        passwordTextChanged?(sender.text ?? "")
+    }
+    
+    func set(image: UIImage?){
+        photoView.set(image: image)
     }
     
 }

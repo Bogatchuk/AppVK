@@ -39,6 +39,8 @@
 		84F9295222A1C63E00211AE5 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295122A1C63E00211AE5 /* RegisterModel.swift */; };
 		84F9295422A1C69C00211AE5 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295322A1C69C00211AE5 /* Sex.swift */; };
 		84F9295622A2CAA300211AE5 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295522A2CAA300211AE5 /* Extension+UIViewController.swift */; };
+		84F9295922A52EDB00211AE5 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295822A52EDB00211AE5 /* AuthManager.swift */; };
+		84F9295C22A5D6AF00211AE5 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295B22A5D6AF00211AE5 /* Utilites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		84F9295122A1C63E00211AE5 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		84F9295322A1C69C00211AE5 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		84F9295522A2CAA300211AE5 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		84F9295822A52EDB00211AE5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		84F9295B22A5D6AF00211AE5 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.release.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.release.xcconfig"; sourceTree = "<group>"; };
 		E372ED504192035003AC9A06 /* Pods_RBVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,8 +166,10 @@
 		8405FCF4229B2C2B00BE3753 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				84F9295022A1C61100211AE5 /* Models */,
 				8405FCD2229B259C00BE3753 /* AppDelegate.swift */,
+				84F9295A22A5D68C00211AE5 /* Help files */,
+				84F9295722A52DE800211AE5 /* Manager */,
+				84F9295022A1C61100211AE5 /* Models */,
 				8405FD0B229BBEE900BE3753 /* Extension */,
 				8405FCF8229B2CB900BE3753 /* Routers  */,
 				8405FCF7229B2C9600BE3753 /* Screens */,
@@ -322,6 +328,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		84F9295722A52DE800211AE5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				84F9295822A52EDB00211AE5 /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		84F9295A22A5D68C00211AE5 /* Help files */ = {
+			isa = PBXGroup;
+			children = (
+				84F9295B22A5D6AF00211AE5 /* Utilites.swift */,
+			);
+			path = "Help files";
+			sourceTree = "<group>";
+		};
 		DA92D07E250F643EE90E3B5C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,14 +490,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RBVK/Pods-RBVK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,8 +517,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8405FD4E22A0407800BE3753 /* TextFieldTableViewCell.swift in Sources */,
+				84F9295922A52EDB00211AE5 /* AuthManager.swift in Sources */,
 				8405FD33229C6A6400BE3753 /* CellHeaderProtocol.swift in Sources */,
 				8405FCD5229B259C00BE3753 /* ViewController.swift in Sources */,
+				84F9295C22A5D6AF00211AE5 /* Utilites.swift in Sources */,
 				8405FD00229BA98B00BE3753 /* RegisterViewController.swift in Sources */,
 				8405FD0D229BBF1E00BE3753 /* Extension+UIView.swift in Sources */,
 				8405FD0A229BAB8D00BE3753 /* NibLoadable.swift in Sources */,
