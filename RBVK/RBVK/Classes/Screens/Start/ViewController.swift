@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         signInButton.addTarget(self,action: #selector(signInButtonClicked), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
     }
-    @objc func signInButtonClicked(){
-    
+    @objc func signInButtonClicked(){  
+    StartRouter.shared.goToLoginScreen(from: self)
     }
 
     @objc func signUpButtonClicked(){

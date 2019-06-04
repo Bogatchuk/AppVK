@@ -44,6 +44,10 @@
 		84F9295E22A6681F00211AE5 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295D22A6681F00211AE5 /* CustomError.swift */; };
 		84F9296022A6751D00211AE5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9295F22A6751D00211AE5 /* Validator.swift */; };
 		84F9296222A67A6800211AE5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9296122A67A6800211AE5 /* StorageManager.swift */; };
+		84F9296422A6ADDD00211AE5 /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9296322A6ADDD00211AE5 /* AuthResult.swift */; };
+		84F9296822A6B1F500211AE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9296622A6B1F500211AE5 /* LoginViewController.swift */; };
+		84F9296922A6B1F500211AE5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F9296722A6B1F500211AE5 /* LoginViewController.xib */; };
+		84F9296C22A7159C00211AE5 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9296B22A7159C00211AE5 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +99,13 @@
 		84F9295522A2CAA300211AE5 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		84F9295822A52EDB00211AE5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		84F9295B22A5D6AF00211AE5 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
-		84F9295D22A6681F00211AE5 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomError.swift; path = ../Models/CustomError.swift; sourceTree = "<group>"; };
+		84F9295D22A6681F00211AE5 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		84F9295F22A6751D00211AE5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		84F9296122A67A6800211AE5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		84F9296322A6ADDD00211AE5 /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
+		84F9296622A6B1F500211AE5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84F9296722A6B1F500211AE5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		84F9296B22A7159C00211AE5 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		8F0BA56E8742F91956BB9AD6 /* Pods-RBVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBVK.release.xcconfig"; path = "Target Support Files/Pods-RBVK/Pods-RBVK.release.xcconfig"; sourceTree = "<group>"; };
 		E372ED504192035003AC9A06 /* Pods_RBVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +214,7 @@
 		8405FCF7229B2C9600BE3753 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				84F9296522A6B19F00211AE5 /* Login */,
 				8405FCFD229BA96000BE3753 /* Register */,
 				8405FCF6229B2C7A00BE3753 /* Start */,
 			);
@@ -233,6 +242,7 @@
 		8405FD02229BAA4B00BE3753 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				84F9296A22A7153F00211AE5 /* Text Fields */,
 				8405FD23229C443C00BE3753 /* Header Title View */,
 				8405FD10229BC9FB00BE3753 /* Cell */,
 				8405FD03229BAADC00BE3753 /* Photo View */,
@@ -255,7 +265,6 @@
 				8405FD1A229BDD8300BE3753 /* HeightContainable.swift */,
 				8405FD1C229BDDDF00BE3753 /* Typealias.swift */,
 				8405FD32229C6A6400BE3753 /* CellHeaderProtocol.swift */,
-				84F9295D22A6681F00211AE5 /* CustomError.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -331,6 +340,8 @@
 			children = (
 				84F9295122A1C63E00211AE5 /* RegisterModel.swift */,
 				84F9295322A1C69C00211AE5 /* Sex.swift */,
+				84F9295D22A6681F00211AE5 /* CustomError.swift */,
+				84F9296322A6ADDD00211AE5 /* AuthResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,6 +362,23 @@
 				84F9295F22A6751D00211AE5 /* Validator.swift */,
 			);
 			path = "Help files";
+			sourceTree = "<group>";
+		};
+		84F9296522A6B19F00211AE5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84F9296622A6B1F500211AE5 /* LoginViewController.swift */,
+				84F9296722A6B1F500211AE5 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84F9296A22A7153F00211AE5 /* Text Fields */ = {
+			isa = PBXGroup;
+			children = (
+				84F9296B22A7159C00211AE5 /* TextField.swift */,
+			);
+			path = "Text Fields";
 			sourceTree = "<group>";
 		};
 		DA92D07E250F643EE90E3B5C /* Pods */ = {
@@ -447,6 +475,7 @@
 			files = (
 				8405FD3B229C786100BE3753 /* SegmenterTableViewCell.xib in Resources */,
 				8405FD16229BCA3400BE3753 /* InfoUserTableViewCell.xib in Resources */,
+				84F9296922A6B1F500211AE5 /* LoginViewController.xib in Resources */,
 				8405FD31229C5C3100BE3753 /* HeaderTitleView.xib in Resources */,
 				8405FCDD229B259D00BE3753 /* LaunchScreen.storyboard in Resources */,
 				8405FCF3229B28A900BE3753 /* ViewController.xib in Resources */,
@@ -527,8 +556,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F9296822A6B1F500211AE5 /* LoginViewController.swift in Sources */,
 				84F9295E22A6681F00211AE5 /* CustomError.swift in Sources */,
 				8405FD4E22A0407800BE3753 /* TextFieldTableViewCell.swift in Sources */,
+				84F9296C22A7159C00211AE5 /* TextField.swift in Sources */,
 				84F9296222A67A6800211AE5 /* StorageManager.swift in Sources */,
 				84F9295922A52EDB00211AE5 /* AuthManager.swift in Sources */,
 				8405FD33229C6A6400BE3753 /* CellHeaderProtocol.swift in Sources */,
@@ -545,6 +576,7 @@
 				8405FD1B229BDD8300BE3753 /* HeightContainable.swift in Sources */,
 				8405FD05229BAB1700BE3753 /* PhotoView.swift in Sources */,
 				84F9296022A6751D00211AE5 /* Validator.swift in Sources */,
+				84F9296422A6ADDD00211AE5 /* AuthResult.swift in Sources */,
 				8405FD4422A0341C00BE3753 /* TextTableViewCell.swift in Sources */,
 				8405FD3A229C786100BE3753 /* SegmenterTableViewCell.swift in Sources */,
 				84F9295422A1C69C00211AE5 /* Sex.swift in Sources */,

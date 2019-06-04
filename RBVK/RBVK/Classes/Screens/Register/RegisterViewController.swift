@@ -42,8 +42,14 @@ class RegisterViewController: UIViewController {
     navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
   }
   @objc private func rightBarButtonClicked(sender: UIBarButtonItem){
-    AuthManager.shared.register(with: registerModel) {_ in
-      self.showAlert(with: "Успешно", and: "Вы зарегистрированы.")
+    ARSLineProgress.show()
+    AuthManager.shared.register(with: registerModel) {result in
+      ARSLineProgress.hide()
+      switch result {
+      case .success(_):  self.showAlert(with: "Успешно", and: "Вы зарегистрированы.")
+      case .failure(let error):  self.showAlert(with: "Ошибка", and: error.localizedDescription)
+      }
+      
     }
     
   }
